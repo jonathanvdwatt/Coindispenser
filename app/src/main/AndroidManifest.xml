@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="local.watt.coindispenser" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".CoinDispenserMainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CoinDispenserPaymentCaptureActivity"
+            android:label="@string/title_activity_coin_dispenser_payment_capture"
+            android:parentActivityName=".CoinDispenserMainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="local.watt.coindispenser.CoinDispenserMainActivity" />
+        </activity>
+        <activity
+            android:name=".CoinDispenserDenominationsCalculationActivity"
+            android:label="@string/title_activity_coin_dispenser_denominations_calculation"
+            android:parentActivityName=".CoinDispenserPaymentCaptureActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="local.watt.coindispenser.CoinDispenserPaymentCaptureActivity" />
+        </activity>
+    </application>
+
+</manifest>
